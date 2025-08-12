@@ -1,0 +1,27 @@
+# Web Test Automation Dependencies
+
+# Core testing framework
+pytest==7.4.3
+pytest-html==4.1.1
+pytest-xdist==3.5.0
+
+# Selenium WebDriver
+selenium==4.15.2
+webdriver-manager==4.0.1
+
+# Configuration and utilities
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# Reporting and logging
+allure-pytest==2.13.2
+colorlog==6.8.0
+
+# Data handling
+faker==20.1.0
+requests==2.31.0
+
+# Development dependencies (optional)
+black==23.11.0
+flake8==6.1.0
+pre-commit==3.6.0
