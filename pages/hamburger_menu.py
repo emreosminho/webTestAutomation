@@ -8,7 +8,12 @@ class HamburgerMenu:
 
         # Hamburger Locators
         self.menu_button = (By.ID, "react-burger-menu-btn") 
+        self.menu_all_items = (By.ID, "inventory_sidebar_link")
 
 
     def open_menu(self):
         self.driver.find_element(*self.menu_button).click()
+
+    def open_all_items(self):
+        self.driver.find_element(*self.menu_all_items).click()
+        
