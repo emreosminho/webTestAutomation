@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/emreosminho/webTestAutomation.git'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Run Tests') {
+            steps {
+                sh 'pytest tests/ --alluredir=allure-results'
+            }
+        }
+        stage('Allure Report') {
+            steps {
+                allure includeProperties: false, results: [[path: 'allure-results']]
+            }
+        }
+    }
+}
